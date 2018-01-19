@@ -3,30 +3,31 @@
   <head>
     <meta charset="utf-8">
     <title>solve</title>
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script>
 
     //===================== question 1 ============================//
 
-    //  1  If we list all the natural numbers below 10 that are multiples of 3 or 5, we get 3, 5, 6 and 9. The sum of these multiples is 23.
-
-//Find the sum of all the multiples of 3 or 5 below 1000.
-
+//      1  If we list all the natural numbers below 10 that are multiples of 3 or 5, we get 3, 5, 6 and 9. The sum of these multiples is 23.
+// 
+// Find the sum of all the multiples of 3 or 5 below 1000.
+// 
 //       let arr = [];
 //       arr.length = 999;
-//
+// 
 //       let array35 = [];
 //       for (var i = 0; i < arr.length; i++) {
-//         arr[i]= (i + 1) * 1;
+//         arr[i]= (i + 1);
 //         if(arr[i] % 3 == 0 || arr[i] % 5 == 0 ){
 //           array35.push(arr[i])
 //         }
 //       }
-//
+// 
 //       let sum = array35.reduce((a, b) => a + b, 0);
-//
-//
-//       //233168
+
+
+      //233168
 
 //===================== question 2 ============================//
 //
@@ -243,7 +244,18 @@
 //
 // Find the thirteen adjacent digits in the 1000-digit number that have the greatest product. What is the value of this product?
 
-//
+// let numStr = "7316717653133062491922511967442657474235534919493496983520312774506326239578318016984801869478851843858615607891129494954595017379583319528532088055111254069874715852386305071569329096329522744304355766896648950445244523161731856403098711121722383113622298934233803081353362766142828064444866452387493035890729629049156044077239071381051585930796086670172427121883998797908792274921901699720888093776657273330010533678812202354218097512545405947522435258490771167055601360483958644670632441572215539753697817977846174064955149290862569321978468622482839722413756570560574902614079729686524145351004748216637048440319989000889524345065854122758866688116427171479924442928230863465674813919123162824586178664583591245665294765456828489128831426076900422421902267105562632111110937054421750694165896040807198403850962455444362981230987879927244284909188845801561660979191338754992005240636899125607176060588611646710940507754100225698315520005593572972571636269561882670428252483600823257530420752963450";
+// 
+// let strSplt = numStr.split('');
+// console.log(strSplt);
+// 
+// let longArr = [];
+// for (var i = 0; i < strSplt.length; i++) {
+//   let number = parseInt(strSplt[i]);
+//   longArr.push(number);
+// }
+// console.log(longArr);
+// 
 // console.log(longArr.length);
 // let comparisonArr = [];
 // for (var i = 0; i < longArr.length; i++) {
@@ -279,7 +291,7 @@
 // for (var i = 1; i <= 1000; i++) {
 //   arrPythag.push(i);
 // }
-//
+// 
 // let allTriplets = [];
 // for (var i = 0; i < arrPythag.length; i++) {
 //   for (var k = 0; k < arrPythag.length; k++) {
@@ -349,22 +361,22 @@
 //   compareArr.push([ridArr[i], ridArr[i-1], ridArr[i-2], ridArr[i-3]]);
 //   compareArr.push([ridArr[i], ridArr[i-1], ridArr[i+1], ridArr[i+2]]);
 //   compareArr.push([ridArr[i], ridArr[i-2], ridArr[i-1], ridArr[i+1]]);
-//
+// //
 //   compareArr.push([ridArr[i], ridArr[i+20], ridArr[i+40], ridArr[i+60]]);
 //   compareArr.push([ridArr[i], ridArr[i-20], ridArr[i-40], ridArr[i-60]]);
 //   compareArr.push([ridArr[i], ridArr[i-20], ridArr[i+20], ridArr[i+40]]);
 //   compareArr.push([ridArr[i], ridArr[i-40], ridArr[i-20], ridArr[i+20]]);
-//
+// //
 //   compareArr.push([ridArr[i], ridArr[i+21], ridArr[i+42], ridArr[i+63]]);
 //   compareArr.push([ridArr[i], ridArr[i-21], ridArr[i-42], ridArr[i-63]]);
 //   compareArr.push([ridArr[i], ridArr[i-21], ridArr[i+21], ridArr[i+42]]);
 //   compareArr.push([ridArr[i], ridArr[i-42], ridArr[i-21], ridArr[i+21]]);
-//
+// 
 //   compareArr.push([ridArr[i], ridArr[i+19], ridArr[i+38], ridArr[i+57]]);
 //   compareArr.push([ridArr[i], ridArr[i-19], ridArr[i-38], ridArr[i-57]]);
 //   compareArr.push([ridArr[i], ridArr[i-19], ridArr[i+19], ridArr[i+57]]);
 //   compareArr.push([ridArr[i], ridArr[i-38], ridArr[i-19], ridArr[i+19]]);
-// }
+// // }
 // let greatestSum = 0;
 // for (var i = 0; i < compareArr.length; i++) {
 //   let tempSum = compareArr[i].reduce(function(a,b){return a*b;});
@@ -436,11 +448,453 @@
 //===================== question 14 ============================//
 
 
+//===================== question 15 ============================//
 
+// let rowGrid = [];
+// for (var i = 1; i <= 20; i++) {
+//     rowGrid.push(i);
+// }
+// let rowColumn = [];
+// for (var i = 0; i < rowGrid.length; i++) {
+//   rowColumn.push([rowGrid[i], 1]);
+//   rowColumn.push([rowGrid[i], 2]);
+//   rowColumn.push([rowGrid[i], 3]);
+//   rowColumn.push([rowGrid[i], 4]);
+//   rowColumn.push([rowGrid[i], 5]);
+//   rowColumn.push([rowGrid[i], 6]);
+//   rowColumn.push([rowGrid[i], 7]);
+//   rowColumn.push([rowGrid[i], 8]);
+//   rowColumn.push([rowGrid[i], 9]);
+//   rowColumn.push([rowGrid[i], 10]);
+//   rowColumn.push([rowGrid[i], 11]);
+//   rowColumn.push([rowGrid[i], 12]);
+//   rowColumn.push([rowGrid[i], 13]);
+//   rowColumn.push([rowGrid[i], 14]);
+//   rowColumn.push([rowGrid[i], 15]);
+//   rowColumn.push([rowGrid[i], 16]);
+//   rowColumn.push([rowGrid[i], 17]);
+//   rowColumn.push([rowGrid[i], 18]);
+//   rowColumn.push([rowGrid[i], 19]);
+//   rowColumn.push([rowGrid[i], 20]);
+// }
+
+//===================== question 371 ============================//
+
+// Oregon licence plates consist of three letters followed by a three digit number (each digit can be from [0..9]).
+// While driving to work Seth plays the following game:
+// Whenever the numbers of two licence plates seen on his trip add to 1000 that's a win.
+// 
+// E.g. MIC-012 and HAN-988 is a win and RYU-500 and SET-500 too. (as long as he sees them in the same trip).
+// 
+// Find the expected number of plates he needs to see for a win.
+// Give your answer rounded to 8 decimal places behind the decimal point.
+// 
+// Note: We assume that each licence plate seen is equally likely to have any three digit number on it.
+
+// let plates = [];
+// for (var i = 0; i <= 9; i++) {
+//     plates.push(i);
+// }
+// 
+// possibleCombinations = [];
+// for (var i = 0; i < plates.length; i++) {
+//   for (var k = 0; k < plates.length; k++) {
+//     for (var m = 0; m < plates.length; m++) {
+//       let arr = [plates[i], plates[k], plates[m]];
+//       let plateSum = ""+plates[i]+""+plates[k]+""+plates[m]+"";
+//       let toNum = parseInt(plateSum);
+//       possibleCombinations.push([arr, toNum]);
+//     }
+//   }
+// }
+// 
+// let totalPossibilites = 510/1000;
+// 
+// console.log(totalPossibilites);
+// 
+// 
+// 
+// 
+// let matches = [];
+// for (var i = 0; i < possibleCombinations.length; i++) {
+//   for (var k = 0; k < possibleCombinations.length; k++) {
+//     if (possibleCombinations[i][1] + possibleCombinations[k][1] == 1000){
+//           matches.push([possibleCombinations[i][1], possibleCombinations[k][1]])           
+//         }
+//       }
+//     }
+//     console.log(matches);
+
+//No idea.  Looked at solutions and the Math is beyond what I currently understand.
+
+//===================== question 17 ============================//
+
+// If the numbers 1 to 5 are written out in words: one, two, three, four, five, then there are 3 + 3 + 5 + 4 + 4 = 19 letters used in total.
+// 
+// If all the numbers from 1 to 1000 (one thousand) inclusive were written out in words, how many letters would be used?
+// 
+// 
+// NOTE: Do not count spaces or hyphens. For example, 342 (three hundred and forty-two) contains 23 letters and 115 (one hundred and fifteen) contains 20 letters. The use of "and" when writing out numbers is in compliance with British usage.
+
+// let ones = ['one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine'];
+// let teens = ['ten', 'eleven', 'twelve', 'thirteen', 'fourteen', 'fifteen', 'sixteen', 'seventeen', 'eighteen', 'nineteen'];
+// let tens = ['twenty', 'thrity', 'forty', 'fifty', 'sixty', 'seventy', 'eighty', 'ninety'];
+// let thousands = ['thousand'];
+// let compareOnes = [1,2,3,4,5,6,7,8,9];
+// let compareTeens = [0,1,2,3,4,5,6,7,8,9];
+// let compareTens = [2,3,4,5,6,7,8,9];
+// 
+// let numbers = [];
+// for (var i = 1; i <= 1000; i++) {
+//     numbers.push(i);
+// }
+// 
+// let currentCount = 0;
+// 
+// for (var i = 0; i < numbers.length; i++) {
+//     let numStr = numbers[i].toString();
+//     let numStrArr = numStr.split("");
+//     if(numStrArr.length == 1){
+//       let digit1 = parseInt(numStrArr[0]);
+//       let index = compareOnes.indexOf(digit1);
+//       currentCount = currentCount + ones[index];
+//     }
+//     if(numStrArr.length == 2 && numbers[i]>=20){
+//       let digit1 = parseInt(numStrArr[0]);
+//       let digit2 = parseInt(numStrArr[1]);
+//       let index = compareTens.indexOf(digit1);
+//       let index2 = compareOnes.indexOf(digit2);
+//       currentCount = currentCount + tens[index] + ones[index2];
+//     }
+//     if(numStrArr.length == 2 && numbers[i]<20){
+//       let digit2 = parseInt(numStrArr[1]);
+//       let index2 = compareTeens.indexOf(digit2);
+//       currentCount = currentCount + teens[index2];
+//     }
+//     if(numStrArr.length == 3 && numStrArr[1] == "0" && numStrArr[2] == "0"){
+//       let digit1 = parseInt(numStrArr[0]);
+//       let digit2 = parseInt(numStrArr[1]);
+//       let digit3 = parseInt(numStrArr[2]);
+//       let index3 = compareOnes.indexOf(digit1);
+//       let index2 = compareTens.indexOf(digit2);
+//       let index = compareOnes.indexOf(digit3);
+//       currentCount = currentCount + ones[index3]+"hundred";
+//     }
+//     if(numStrArr.length == 3 && numStrArr[1] == "0" && numStrArr[2] !== "0"){
+//       let digit1 = parseInt(numStrArr[0]);
+//       let digit2 = parseInt(numStrArr[1]);
+//       let digit3 = parseInt(numStrArr[2]);
+//       let index3 = compareOnes.indexOf(digit1);
+//       let index2 = compareTens.indexOf(digit2);
+//       let index = compareOnes.indexOf(digit3);
+//       currentCount = currentCount + ones[index3]+"hundred"+"and"+tens[index2]+ones[index];
+//     }
+//     if(numStrArr.length == 3 && numStrArr[1] == "1"){
+//       let digit1 = parseInt(numStrArr[0]);
+//       let digit2 = parseInt(numStrArr[1]);
+//       let digit3 = parseInt(numStrArr[2]);
+//       let index3 = compareOnes.indexOf(digit1);
+//       let index2 = compareTeens.indexOf(digit3);
+//       currentCount = currentCount + ones[index3]+"hundred"+"and"+teens[index2];
+//     }
+//   if(numStrArr.length == 3 && numStrArr[1] !== "0" && numStrArr[2] !== "0" && numStrArr[1] !== "1"){
+//     let digit1 = parseInt(numStrArr[0]);
+//     let digit2 = parseInt(numStrArr[1]);
+//     let digit3 = parseInt(numStrArr[2]);
+//     let index3 = compareOnes.indexOf(digit1);
+//     let index2 = compareTens.indexOf(digit2);
+//     let index = compareOnes.indexOf(digit3);
+//     currentCount = currentCount + ones[index3]+"hundred"+"and"+tens[index2]+ones[index];
+//   }
+//   if(numStrArr.length == 3 && numStrArr[1] !== "0" && numStrArr[2] == "0" && numStrArr[1] !== "1"){
+//     let digit1 = parseInt(numStrArr[0]);
+//     let digit2 = parseInt(numStrArr[1]);
+//     let digit3 = parseInt(numStrArr[2]);
+//     let index3 = compareOnes.indexOf(digit1);
+//     let index2 = compareTens.indexOf(digit2);
+//     let index = compareOnes.indexOf(digit3);
+//     currentCount = currentCount + ones[index3]+"hundred"+"and"+tens[index2];
+//   }
+//   if(numStrArr.length == 4){
+//     currentCount = currentCount + "one"+"thousand";
+//   }
+// }
+// console.log(testArr);
+// let newCurrent = currentCount.replace(/undefined/g, "");
+// console.log(newCurrent);
+// console.log(newCurrent.length);
+
+//===================== question 43 ============================//
+
+// The number, 1406357289, is a 0 to 9 pandigital number because it is made up of each of the digits 0 to 9 in some order, but it also has a rather interesting sub-string divisibility property.
+// 
+// Let d1 be the 1st digit, d2 be the 2nd digit, and so on. In this way, we note the following:
+// 
+// d2d3d4=406 is divisible by 2
+// d3d4d5=063 is divisible by 3
+// d4d5d6=635 is divisible by 5
+// d5d6d7=357 is divisible by 7
+// d6d7d8=572 is divisible by 11
+// d7d8d9=728 is divisible by 13
+// d8d9d10=289 is divisible by 17
+// Find the sum of all 0 to 9 pandigital numbers with this property.
+  let numbersToTest = [];
+for(i = 100; i < 999;  i += 1) {
+    let str = i.toString();
+    let split = str.split("");
+    let a = parseInt(split[0]);
+    let b = parseInt(split[1]);
+    let c = parseInt(split[2]);
+    let combo1 = [a,b,c];
+    if(a !== b &&
+       a !== c &&
+       b !== c){
+    numbersToTest.push(combo1);
+  }
+    let combo3 = [0,a,c];
+    if(b == 0 &&
+      a !== c &&
+      c !== 0){
+      numbersToTest.push(combo3);
+    }
+    
+  }
+  let testArr2 = [];
+  for (var i = 0; i < numbersToTest.length; i++) {
+    let testArr1 = ["x","x","x","x","x","x","x","x","x","x"];
+    let numbersJoin = numbersToTest[i].join("");
+    let number = parseInt(numbersJoin);
+    if (number % 2 == 0) {
+      testArr1[1] = numbersToTest[i][0];
+      testArr1[2] = numbersToTest[i][1];
+      testArr1[3] = numbersToTest[i][2];
+      testArr2.push(testArr1);
+    }  
+  }
+  let testArr3 = [];
+  for (var i = 0; i < numbersToTest.length; i++) {
+    let testArr1 = ["x","x","x","x","x","x","x","x","x","x"];
+    let numbersJoin = numbersToTest[i].join("");
+    let number = parseInt(numbersJoin);
+    if (number % 3 == 0) {
+      testArr1[2] = numbersToTest[i][0];
+      testArr1[3] = numbersToTest[i][1];
+      testArr1[4] = numbersToTest[i][2];
+      testArr3.push(testArr1);
+    }  
+  }
+  let testArr4 = [];
+  for (var i = 0; i < numbersToTest.length; i++) {
+    let testArr1 = ["x","x","x","x","x","x","x","x","x","x"];
+    let numbersJoin = numbersToTest[i].join("");
+    let number = parseInt(numbersJoin);
+    if (number % 5 == 0) {
+      testArr1[3] = numbersToTest[i][0];
+      testArr1[4] = numbersToTest[i][1];
+      testArr1[5] = numbersToTest[i][2];
+      testArr4.push(testArr1);
+    }  
+  }
+  let testArr5 = [];
+  for (var i = 0; i < numbersToTest.length; i++) {
+    let testArr1 = ["x","x","x","x","x","x","x","x","x","x"];
+    let numbersJoin = numbersToTest[i].join("");
+    let number = parseInt(numbersJoin);
+    if (number % 7 == 0) {
+      testArr1[4] = numbersToTest[i][0];
+      testArr1[5] = numbersToTest[i][1];
+      testArr1[6] = numbersToTest[i][2];
+      testArr5.push(testArr1);
+    }  
+  }
+  let testArr6 = [];
+  for (var i = 0; i < numbersToTest.length; i++) {
+    let testArr1 = ["x","x","x","x","x","x","x","x","x","x"];
+    let numbersJoin = numbersToTest[i].join("");
+    let number = parseInt(numbersJoin);
+    if (number % 11 == 0) {
+      testArr1[5] = numbersToTest[i][0];
+      testArr1[6] = numbersToTest[i][1];
+      testArr1[7] = numbersToTest[i][2];
+      testArr6.push(testArr1);
+    }  
+  }
+  let testArr7 = [];
+  for (var i = 0; i < numbersToTest.length; i++) {
+    let testArr1 = ["x","x","x","x","x","x","x","x","x","x"];
+    let numbersJoin = numbersToTest[i].join("");
+    let number = parseInt(numbersJoin);
+    if (number % 13 == 0) {
+      testArr1[6] = numbersToTest[i][0];
+      testArr1[7] = numbersToTest[i][1];
+      testArr1[8] = numbersToTest[i][2];
+      testArr7.push(testArr1);
+    }  
+  }
+  let testArr8 = [];
+  for (var i = 0; i < numbersToTest.length; i++) {
+    let testArr1 = ["x","x","x","x","x","x","x","x","x","x"];
+    let numbersJoin = numbersToTest[i].join("");
+    let number = parseInt(numbersJoin);
+    if (number % 17 == 0) {
+      testArr1[7] = numbersToTest[i][0];
+      testArr1[8] = numbersToTest[i][1];
+      testArr1[9] = numbersToTest[i][2];
+      testArr8.push(testArr1);
+    }  
+  }
+  let finalArr9 = [];
+  for (var i = 0; i < testArr2.length; i++) {
+    for (var k = 0; k < testArr3.length; k++) {
+      let tempArr = ["x","x","x","x","x","x","x","x","x","x"];
+      if(testArr2[i][2] == testArr3[k][2] &&
+         testArr2[i][3] == testArr3[k][3]){
+           tempArr[1] = testArr2[i][1];
+           tempArr[2] = testArr2[i][2];
+           tempArr[3] = testArr2[i][3];
+           tempArr[4] = testArr3[k][4];
+           finalArr9.push(tempArr);
+         }
+    }
+  }
+  let finalArr10 = [];
+  for (var i = 0; i < finalArr9.length; i++) {
+    for (var k = 0; k < testArr4.length; k++) {
+      let tempArr = ["x","x","x","x","x","x","x","x","x","x"];
+      if(finalArr9[i][3] == testArr4[k][3] &&
+         finalArr9[i][4] == testArr4[k][4]){
+           tempArr[1] = finalArr9[i][1];
+           tempArr[2] = finalArr9[i][2];
+           tempArr[3] = finalArr9[i][3];
+           tempArr[4] = finalArr9[i][4];
+           tempArr[5] = testArr4[k][5];
+           finalArr10.push(tempArr);
+         }
+    }
+  }
+  let finalArr11 = [];
+  for (var i = 0; i < finalArr10.length; i++) {
+    for (var k = 0; k < testArr5.length; k++) {
+      let tempArr = ["x","x","x","x","x","x","x","x","x","x"];
+      if(finalArr10[i][4] == testArr5[k][4] &&
+         finalArr10[i][5] == testArr5[k][5]){
+           tempArr[1] = finalArr10[i][1];
+           tempArr[2] = finalArr10[i][2];
+           tempArr[3] = finalArr10[i][3];
+           tempArr[4] = finalArr10[i][4];
+           tempArr[5] = finalArr10[i][5];
+           tempArr[6] = testArr5[k][6];
+           finalArr11.push(tempArr);
+         }
+    }
+  }
+  let finalArr12 = [];
+  for (var i = 0; i < finalArr11.length; i++) {
+    for (var k = 0; k < testArr6.length; k++) {
+      let tempArr = ["x","x","x","x","x","x","x","x","x","x"];
+      if(finalArr11[i][5] == testArr6[k][5] &&
+         finalArr11[i][6] == testArr6[k][6]){
+           tempArr[1] = finalArr11[i][1];
+           tempArr[2] = finalArr11[i][2];
+           tempArr[3] = finalArr11[i][3];
+           tempArr[4] = finalArr11[i][4];
+           tempArr[5] = finalArr11[i][5];
+           tempArr[6] = finalArr11[i][6];
+           tempArr[7] = testArr6[k][7];
+           finalArr12.push(tempArr);
+         }
+    }
+  }
+  let finalArr13 = [];
+  for (var i = 0; i < finalArr12.length; i++) {
+    for (var k = 0; k < testArr7.length; k++) {
+      let tempArr = ["x","x","x","x","x","x","x","x","x","x"];
+      if(finalArr12[i][6] == testArr7[k][6] &&
+         finalArr12[i][7] == testArr7[k][7]){
+           tempArr[1] = finalArr12[i][1];
+           tempArr[2] = finalArr12[i][2];
+           tempArr[3] = finalArr12[i][3];
+           tempArr[4] = finalArr12[i][4];
+           tempArr[5] = finalArr12[i][5];
+           tempArr[6] = finalArr12[i][6];
+           tempArr[7] = finalArr12[i][7];
+           tempArr[8] = testArr7[k][8];
+           finalArr13.push(tempArr);
+         }
+    }
+  }
+  let finalArr14 = [];
+  for (var i = 0; i < finalArr13.length; i++) {
+    for (var k = 0; k < testArr8.length; k++) {
+      let tempArr = ["x","x","x","x","x","x","x","x","x","x"];
+      if(finalArr13[i][7] == testArr8[k][7] &&
+         finalArr13[i][8] == testArr8[k][8]){
+           tempArr[1] = finalArr13[i][1];
+           tempArr[2] = finalArr13[i][2];
+           tempArr[3] = finalArr13[i][3];
+           tempArr[4] = finalArr13[i][4];
+           tempArr[5] = finalArr13[i][5];
+           tempArr[6] = finalArr13[i][6];
+           tempArr[7] = finalArr13[i][7];
+           tempArr[8] = finalArr13[i][8];
+           tempArr[9] = testArr8[k][9];
+           finalArr14.push(tempArr);
+         }
+    }
+  }
+  let finalArr15 = [];
+  for (var i = 0; i < finalArr14.length; i++) {
+    let tempArr = ["x","x","x","x","x","x","x","x","x","x"];
+    tempArr[1] = finalArr14[i][1];
+    tempArr[2] = finalArr14[i][2];
+    tempArr[3] = finalArr14[i][3];
+    tempArr[4] = finalArr14[i][4];
+    tempArr[5] = finalArr14[i][5];
+    tempArr[6] = finalArr14[i][6];
+    tempArr[7] = finalArr14[i][7];
+    tempArr[8] = finalArr14[i][8];
+    tempArr[9] = finalArr14[i][9];
+    if (finalArr14[i].includes(0)==false){
+      tempArr[0] = 0;
+    }
+    else if (finalArr14[i].includes(1)==false){
+      tempArr[0] = 1;
+    }
+    else if (finalArr14[i].includes(2)==false){
+      tempArr[0] = 2;
+    }
+    else if (finalArr14[i].includes(3)==false){
+      tempArr[0] = 3;
+    }
+    else if (finalArr14[i].includes(4)==false){
+      tempArr[0] = 4;
+    }
+    else if (finalArr14[i].includes(5)==false){
+      tempArr[0] = 5;
+    }
+    else if (finalArr14[i].includes(6)==false){
+      tempArr[0] = 6;
+    }
+    else if (finalArr14[i].includes(7)==false){
+      tempArr[0] = 7;
+    }
+    else if (finalArr14[i].includes(8)==false){
+      tempArr[0] = 8;
+    }
+    else if (finalArr14[i].includes(9)==false){
+      tempArr[0] = 9;
+    }
+    finalArr15.push(tempArr);
+  }
+  console.log(finalArr15);
+  let total = 1406357289+1430952867+1460357289+4106357289+4130952867+ 4160357289;
+  console.log(total);
     </script>
 
   </head>
   <body>
+    
+
 
   </body>
 </html>
